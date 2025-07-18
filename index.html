@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire Groupe Worship</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Favicon en .ico -->
+<link rel="icon" type="." href="./vog-logo-simple.svg" />
+
+<!-- Ou en .png -->
+<!-- <link rel="icon" type="image/png" href="favicon.png" /> -->
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Rejoindre le Groupe Worship <br>Voice Of God (VOG)</h1>
+        <img src="./vog-logo-simple.svg" alt="" width="200px" height="200px">
+       <form action="https://formsubmit.co/coulibalyisrael123@mail.com" method="POST">
+        <!-- Empêche le captcha de s'afficher -->
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- Redirection après envoi -->
+        <input type="hidden" name="_next" value="https://ton-site.com/merci.html">
+
+        <!-- Champ Nom -->
+        <label for="nom">Nom :</label>
+        <input type="text" name="Nom" required>
+
+        <!-- Champ Email -->
+        <label for="email">Email :</label>
+        <input type="email" name="Email" required>
+
+        <!-- Autres questions -->
+        <label>Es-tu baptisé du Saint-Esprit ?</label>
+        <input type="radio" name="Baptême_Saint_Esprit" value="Oui" required> Oui
+        <input type="radio" name="Baptême_Saint_Esprit" value="Non"> Non
+
+        <label>Disponibilité pour les activités :</label>
+        <input type="radio" name="Disponibilité" value="Toujours"> Toujours
+        <input type="radio" name="Disponibilité" value="Au maximum"> Au maximum
+        <input type="radio" name="Disponibilité" value="Souvent"> Souvent
+
+        <!-- Bouton envoyer -->
+        <button type="submit">Envoyer</button>
+        </form>
+
+
+</body>
+</html>
