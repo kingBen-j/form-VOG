@@ -1,51 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulaire Groupe Worship</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Favicon en .ico -->
-<link rel="icon" type="." href="./vog-logo-simple.svg" />
-
-<!-- Ou en .png -->
-<!-- <link rel="icon" type="image/png" href="favicon.png" /> -->
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulaire d'inscription - Groupe Worship</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Rejoindre le Groupe Worship</h1>
 
-    <div class="container">
-        <h1>Rejoindre le Groupe Worship <br>Voice Of God (VOG)</h1>
-        <img src="./vog-logo-simple.svg" alt="" width="200px" height="200px">
-       <form action="https://formsubmit.co/coulibalyisrael123@mail.com" method="POST">
-        <!-- Empêche le captcha de s'afficher -->
-        <input type="hidden" name="_captcha" value="false">
+    <form action="https://formsubmit.co/coulibalyisrael123@mail.com" method="POST">
+      <!-- Formsubmit options -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://ton-site.com/merci.html">
 
-        <!-- Redirection après envoi -->
-        <input type="hidden" name="_next" value="https://ton-site.com/merci.html">
+      <!-- Nom -->
+      <label for="nom">Nom :</label>
+      <input type="text" name="Nom" id="nom" required>
 
-        <!-- Champ Nom -->
-        <label for="nom">Nom :</label>
-        <input type="text" name="Nom" required>
+      <!-- Prénom -->
+      <label for="prenom">Prénom :</label>
+      <input type="text" name="Prénom" id="prenom" required>
 
-        <!-- Champ Email -->
-        <label for="email">Email :</label>
-        <input type="email" name="Email" required>
+      <!-- Email -->
+      <label for="email">Adresse e-mail :</label>
+      <input type="email" name="Email" id="email" required>
 
-        <!-- Autres questions -->
-        <label>Es-tu baptisé du Saint-Esprit ?</label>
-        <input type="radio" name="Baptême_Saint_Esprit" value="Oui" required> Oui
-        <input type="radio" name="Baptême_Saint_Esprit" value="Non"> Non
+      <!-- Téléphone -->
+      <label for="tel">Numéro de téléphone :</label>
+      <input type="tel" name="Téléphone" id="tel" required>
 
-        <label>Disponibilité pour les activités :</label>
-        <input type="radio" name="Disponibilité" value="Toujours"> Toujours
-        <input type="radio" name="Disponibilité" value="Au maximum"> Au maximum
-        <input type="radio" name="Disponibilité" value="Souvent"> Souvent
+      <!-- Rôle souhaité -->
+      <label for="role">Quel rôle souhaites-tu avoir dans le groupe ?</label>
+      <select name="Rôle_dans_le_groupe" id="role" required>
+        <option value="">-- Choisir un rôle --</option>
+        <option value="Chantre">Chantre</option>
+        <option value="Musicien">Musicien</option>
+        <option value="Intercesseur">Intercesseur</option>
+        <option value="Technique (son, lumière, etc.)">Technique (son, lumière...)</option>
+        <option value="Autre">Autre</option>
+      </select>
 
-        <!-- Bouton envoyer -->
-        <button type="submit">Envoyer</button>
-        </form>
+      <!-- Baptême du Saint-Esprit -->
+      <label>Es-tu baptisé du Saint-Esprit ?</label>
+      <input type="radio" name="Baptême_du_Saint_Esprit" value="Oui" required> Oui
+      <input type="radio" name="Baptême_du_Saint_Esprit" value="Non"> Non
 
+      <!-- Disponibilité -->
+      <label>Quelle est ta disponibilité pour les activités ?</label>
+      <input type="radio" name="Disponibilité" value="Toujours" required> Toujours
+      <input type="radio" name="Disponibilité" value="Au maximum"> Au maximum
+      <input type="radio" name="Disponibilité" value="Souvent"> Souvent
 
+      <!-- Motivation -->
+      <label for="motivation">Pourquoi veux-tu rejoindre ce groupe de worship ?</label>
+      <textarea name="Motivation" id="motivation" rows="4" required></textarea>
+
+      <!-- Engagement spirituel -->
+      <label>Es-tu prêt à être le plus sérieux possible pour l'œuvre de Dieu ?</label>
+      <input type="radio" name="Engagement_œuvre_de_Dieu" value="Oui" required> Oui
+      <input type="radio" name="Engagement_œuvre_de_Dieu" value="Non"> Non
+
+      <!-- Participation -->
+      <label>Es-tu prêt à participer toujours ou le plus possible à nos activités sur nos plateformes ?</label>
+      <input type="radio" name="Participation_activités" value="Oui" required> Oui
+      <input type="radio" name="Participation_activités" value="Non"> Non
+
+      <!-- Bouton envoyer -->
+      <button type="submit">Envoyer la candidature</button>
+    </form>
+  </div>
 </body>
 </html>
